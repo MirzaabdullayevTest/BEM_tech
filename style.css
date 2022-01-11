@@ -1,0 +1,184 @@
+:root {
+    --flex: flex;
+    --width: 1140px;
+    --padding: 15px;
+    --wrap: wrap;
+    --auto: auto;
+    --colorHead: rgb(5, 5, 117);
+    --col-12: calc(100% / 12 * 12);
+    --col-11: calc(100% / 12 * 11);
+    --col-10: calc(100% / 12 * 10);
+    --col-9: calc(100% / 12 * 9);
+    --col-8: calc(100% / 12 * 8);
+    --col-7: calc(100% / 12 * 7);
+    --col-6: calc(100% / 12 * 6);
+    --col-5: calc(100% / 12 * 5);
+    --col-4: calc(100% / 12 * 4);
+    --col-3: calc(100% / 12 * 3);
+    --col-2: calc(100% / 12 * 2);
+    --col-1: calc(100% / 12 * 1);
+    --lgContainerW: 920px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial";
+}
+
+/* ==================== Grid system started*/
+.container {
+    max-width: var(--width);
+    margin: var(--auto);
+}
+
+.row {
+    display: var(--flex);
+    flex-wrap: var(--wrap);
+}
+
+.col_12 {
+    width: var(--col-12);
+}
+
+.col_11 {
+    width: var(--col-11);
+}
+
+.col_10 {
+    width: var(--col-10);
+}
+
+.col_9 {
+    width: var(--col-9);
+}
+
+.col_8 {
+    width: var(--col-8);
+}
+
+.col_6 {
+    width: var(--col-6);
+}
+
+/* ======================= media started */
+/* lg 992 <= 1199  */
+@media (max-width: 1199px) {
+    .container {
+        max-width: var(--lgContainerW);
+    }
+
+    .col_lg_10 {
+        width: var(--col-10);
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: var(--lgContainerW);
+    }
+
+    .col_md_10 {
+        width: var(--col-10);
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: var(--lgContainerW);
+    }
+
+    .col_sm_10 {
+        width: var(--col-10);
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        max-width: var(--lgContainerW);
+    }
+
+    .col_xs_12 {
+        width: var(--col-12);
+    }
+}
+
+/* ====================  Grid system end */
+
+.header {
+    height: 90vh;
+    background-color: #ccc;
+    padding: 20px 0;
+}
+
+.header__nav {
+    display: var(--flex);
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+}
+
+.header__nav__logo {
+    font-size: 30px;
+    color: rgb(212, 67, 0);
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header__nav__menu {
+    display: flex;
+}
+
+.menu__link {
+    display: block;
+    font-size: 18px;
+    color: #001;
+    margin-left: 25px;
+    transition: .5s;
+}
+
+.menu__link:hover {
+    transform: rotate(30deg);
+    color: indigo;
+}
+
+.header__title {
+    margin: auto;
+    margin-top: 180px;
+}
+
+.header__title__head {
+    font-size: 70px;
+    color: var(--colorHead);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.header__title__text {
+    line-height: 24px;
+    font-size: 16px;
+    color: #000;
+}
+
+.header__title__btn {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--colorHead);
+    border: 1px solid rgb(5, 5, 117);
+    padding: 14px 45px;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 25px;
+    border-radius: 5px;
+    transition: .45s;
+}
+
+.header__title__btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
